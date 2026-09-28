@@ -1,0 +1,107 @@
+:root {
+  --bg: #151e2e;
+  --card: #243044;
+  --text: #e8eef7;
+  --accent: #457a88;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: linear-gradient(160deg, #151e2e, #263d54);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.page {
+  width: min(900px, 92vw);
+  margin: 32px auto;
+}
+
+.top h1 {
+  margin: 0 0 4px;
+  font-size: 2rem;
+}
+
+.top p {
+  margin: 0 0 20px;
+  opacity: 0.75;
+}
+
+.new-task {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  background: var(--card);
+  margin-bottom: 20px;
+}
+
+.new-task label {
+  display: grid;
+  gap: 4px;
+  font-size: 0.9rem;
+}
+
+.new-task input,
+.new-task textarea {
+  padding: 8px 10px;
+  border: 1px solid #3d5674;
+  background: #151e2e;
+  color: var(--text);
+}
+
+.new-task button,
+.card button {
+  justify-self: start;
+  padding: 8px 14px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.board {
+  display: grid;
+  gap: 12px;
+}
+
+.card {
+  padding: 14px 16px;
+  background: var(--card);
+  border-left: 4px solid var(--accent);
+}
+
+.card.done {
+  opacity: 0.55;
+  border-left-color: #54709f;
+}
+
+.card header {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.card footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panel {
+  padding: 16px;
+  background: var(--card);
+}
+
+.panel.bad,
+.warn {
+  color: #e09494;
+}
